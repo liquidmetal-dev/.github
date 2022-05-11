@@ -16,6 +16,10 @@ Liquid Metal is a set of solutions to:
 
 > Hang on, what is this **microvm** thing you mention!?! A microvm is a very lightweight virtual machine that optimizes for speed and less resource consumption over supporting a wide array of devices/etc. We support [Firecracker](https://firecracker-microvm.github.io/) and experimentally [Cloud Hypervisor](https://www.cloudhypervisor.org/). Read more about this [here](https://www.techtarget.com/searchsecurity/definition/micro-VM-micro-virtual-machine) and [here](https://itnext.io/microvm-another-level-of-abstraction-for-serverless-computing-5f106b030f15).
 
+### :mag_right: How do i get started?
+
+Head on over to our [getting started](https://github.com/weaveworks-liquidmetal/getting-started) repo where we have documentation, demos and some automatcion goodies for you :tada:.
+
 ### :sparkles: What are the main projects?
 
 * [flintlock](https://github.com/weaveworks-liquidmetal/flintlock) - this is an agent that's deployed to a host machine (physical or virtual) which enables you to start/manage microvms via API calls. It does not know of Kubernetes and could therefore be used to start a microvm to accomplish any task you choose. We integrate heavily with containerd as a way to use container images as the volumes for the microvm....copying rawfs files around is a real pain and very slow.

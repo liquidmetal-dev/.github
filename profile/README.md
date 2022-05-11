@@ -1,5 +1,3 @@
-![Weaveworks Logo](images/weaveWorks_colour_logo_POS_RGB_144x60.png)
-
 ## Hi there 👋
 
 Thanks for visiting, this organization contains all the projects related to Weaveworks **Liquid Metal**.

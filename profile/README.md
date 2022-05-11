@@ -26,6 +26,7 @@ Liquid Metal is a set of solutions to:
 
 ### :flashlight: What else are we looking at?
 
+* [fl](https://github.com/weaveworks-liquidmetal/fl) - an experimental CLI for interacting with flintlock to manage the lifecycle of microvms.
 * [EKS-Anywhere (EKS-A)](https://anywhere.eks.amazonaws.com/) (poc) - we have been working on [adding CAPMVM as a provider](https://github.com/weaveworks-liquidmetal/eks-anywhere/tree/capmvm_provider) to EKS-A.
 * Microvm Scheduler (in-development) - this will enable the dynamic placement of microvms on the available pool of hosts machines taking into account resource availability/requirements, labels etc. So, a bit like kube-scheduler but for microvms. We will be providing some integration points so that the scheduler can automatically determine the available baremetal hosts, and we'll add an integration for Tinkerbell (and probably Ironic & MaaS).
 

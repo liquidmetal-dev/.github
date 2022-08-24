@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../images/LM-LOGO-HORIZONTAL-LIGHTBACK.png" alt="drawing" width="400"/>
+</p>
+
 ## Hi there 👋
 
 Thanks for visiting, this organization contains all the projects related to Weaveworks **Liquid Metal**.
@@ -18,7 +22,7 @@ Liquid Metal is a set of solutions to:
 
 ### :mag_right: How do i get started?
 
-Head on over to our [getting started](https://github.com/weaveworks-liquidmetal/getting-started) repo where we have documentation, demos and some automatcion goodies for you :tada:.
+Head on over to our [getting started](https://github.com/weaveworks-liquidmetal/getting-started) repo where we have documentation, demos and some automation goodies for you :tada:.
 
 ### :sparkles: What are the main projects?
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/weaveworks-liquidmetal/getting-started/main/media/logos/SVG/LM%20LOGO-HORIZONTAL%20LIGHTBACK-02.svg" alt="lm" width="400x"/>
+  <img src="https://raw.githubusercontent.com/weaveworks-liquidmetal/getting-started/main/media/logos/SVG/LM%20LOGO-HORIZONTAL%20LIGHTBACK-02_trimmed.svg" alt="lm" width="400x"/>
 </p>
 
 ## Hi there 👋

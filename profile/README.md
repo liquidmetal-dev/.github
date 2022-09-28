@@ -22,7 +22,14 @@ Liquid Metal is a set of solutions to:
 
 ### :mag_right: How do i get started?
 
-Head on over to our [getting started](https://github.com/weaveworks-liquidmetal/getting-started) repo where we have documentation, demos and some automation goodies for you :tada:.
+:firecracker: BREAKING NEWS :firecracker: There are now brand new and extremely shiny user docs published [right here](https://weaveworks-liquidmetal.github.io/site/) :scream: . They are still a work-in-progress, but soon they will be a one-stop-shop for everything you could ever want to know about creating Liquid Metal platform and bare-metal workload clusters:
+- Getting started tutorial for running Liquid Metal on your own machine
+- Advanced guides to running Liquid Metal in production
+- Architecture diagrams
+- Community information
+- And much more!
+
+While we work on this, if you notice the offical site doesn't have everything you need right now, you can head on over to our [getting started](https://github.com/weaveworks-liquidmetal/getting-started) repo where we have documentation, demos and some automation goodies for you :tada:.
 
 ### :sparkles: What are the main projects?
 

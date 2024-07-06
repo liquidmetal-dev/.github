@@ -43,6 +43,7 @@ While we work on this, if you notice the offical site doesn't have everything yo
 
 ### :flashlight: What else are we looking at?
 
+* [mikrolite](https://github.com/liquidmetal-dev/mikrolite) - an experimental CLI for creating microvms without flintlock.
 * [fl](https://github.com/weaveworks-liquidmetal/fl) - an experimental CLI for interacting with flintlock to manage the lifecycle of microvms.
 * [EKS-Anywhere (EKS-A)](https://anywhere.eks.amazonaws.com/) (poc) - we have been working on [adding CAPMVM as a provider](https://github.com/weaveworks-liquidmetal/eks-anywhere/tree/capmvm_provider) to EKS-A.
 * Microvm Scheduler (in-development) - this will enable the dynamic placement of microvms on the available pool of hosts machines taking into account resource availability/requirements, labels etc. So, a bit like kube-scheduler but for microvms. We will be providing some integration points so that the scheduler can automatically determine the available baremetal hosts, and we'll add an integration for Tinkerbell (and probably Ironic & MaaS).

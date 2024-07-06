@@ -4,7 +4,9 @@
 
 ## Hi there 👋
 
-Thanks for visiting, this organization contains all the projects related to Weaveworks **Liquid Metal**.
+Thanks for visiting, this organization contains all the projects related to **Liquid Metal**.
+
+> :tada: **This project was originally developed by Weaveworks but is now owned & run by the community. If you are interested in helping out please reach out.**
 
 ### :raising_hand: What is Liquid Metal?
 

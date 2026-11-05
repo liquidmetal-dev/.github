@@ -53,9 +53,8 @@ While we work on this, if you notice the offical site doesn't have everything yo
 Get in contact with us if you want to learn more about Liquid Metal. You can hit us up in any of these ways:
 
 * [Weavework Community Slack](https://weave-community.slack.com/archives/C02KARWGR7S)
-* [Via our website](https://www.weave.works/contact/)
 * By creating an issue / discussion in one of the projects
 
 ### :books: Some extra reading
 
-* [Liquid Metal: multi-cluster Kubernetes on bare metal with microVMs](https://www.weave.works/blog/multi-cluster-kubernetes-on-microvms-for-bare-metal) (Blog)
+* [Liquid Metal: multi-cluster Kubernetes on bare metal with microVMs](https://web.archive.org/web/20221128021814/https://www.weave.works/blog/multi-cluster-kubernetes-on-microvms-for-bare-metal) (Blog)

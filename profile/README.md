@@ -10,43 +10,43 @@ Thanks for visiting, this organization contains all the projects related to **Li
 
 ### :raising_hand: What is Liquid Metal?
 
-Liquid Metal is a set of solutions to:
+Liquid Metal is a set of open source projects for running **lightweight virtual machines (microVMs)** on your own hardware and managing them **declaratively**.
 
-* **Declaratively** provision Kubernetes clusters **dynamically** on lightweight virtual machines (i.e. microVMs) and bare-metal
-* Create **lightweight** clusters to **maximize the available [edge] compute**
-  * microVMs are our friend
-  * More clusters/nodes on the available bare-metal hosts
-  * Minimizing resource footprint without sacrificing hard isolation
-* Support clusters where **direct access to hardware acceleration** is needed (i.e. 5G networks)  
-* Using standard kubernetes and linux kernel and operating system capabilities
+* **Hard isolation, light footprint**: every workload gets its own kernel and a real KVM boundary, without the overhead of a full VM
+* **Fast to boot, fast to throw away**: microVMs start in close to container time
+* **More from your hardware**: pack more workloads onto each bare-metal host, from datacenter servers to the edge
+* **Standard building blocks**: [Firecracker](https://firecracker-microvm.github.io/), [Cloud Hypervisor](https://www.cloudhypervisor.org/), containerd, KVM and Kubernetes
 
-> Hang on, what is this **microvm** thing you mention!?! A microvm is a very lightweight virtual machine that optimizes for speed and less resource consumption over supporting a wide array of devices/etc. We support [Firecracker](https://firecracker-microvm.github.io/) and experimentally [Cloud Hypervisor](https://www.cloudhypervisor.org/). Read more about this [here](https://www.techtarget.com/searchsecurity/definition/micro-VM-micro-virtual-machine) and [here](https://itnext.io/microvm-another-level-of-abstraction-for-serverless-computing-5f106b030f15).
+Use it for:
 
-### :mag_right: How do i get started?
+* [Kubernetes clusters](https://liquidmetal.dev/docs/use-cases/kubernetes/) with microVMs as nodes
+* [CI runners](https://liquidmetal.dev/docs/use-cases/ci-runners/) with a fresh microVM per job
+* [Ephemeral environments](https://liquidmetal.dev/docs/use-cases/ephemeral-environments/) for previews, tests and development
+* [AI agent sandboxes](https://liquidmetal.dev/docs/use-cases/agent-sandboxes/) to run untrusted code in
 
-:firecracker: BREAKING NEWS :firecracker: There are now brand new and extremely shiny user docs published [right here](https://www.liquidmetal.dev/) :scream: . They are still a work-in-progress, but soon they will be a one-stop-shop for everything you could ever want to know about creating Liquid Metal platform and bare-metal workload clusters:
-- Getting started tutorial for running Liquid Metal on your own machine
-- Advanced guides to running Liquid Metal in production
-- Architecture diagrams
-- Community information
-- And much more!
+> Hang on, what is this **microVM** thing you mention!?! A microVM is a very lightweight virtual machine that optimizes for speed and less resource consumption over supporting a wide array of devices. It gives you the isolation of a VM with close to the speed of a container.
 
-While we work on this, if you notice the offical site doesn't have everything you need right now, you can head on over to our [getting started](https://github.com/liquidmetal-dev/getting-started) repo where we have documentation, demos and some automation goodies for you :tada:.
+### :mag_right: How do I get started?
+
+Head over to [liquidmetal.dev](https://liquidmetal.dev/). The [30 minute tutorial](https://liquidmetal.dev/docs/tutorial-basics/) builds a Liquid Metal platform on your own Linux machine.
 
 ### :sparkles: What are the main projects?
 
-* [flintlock](https://github.com/liquidmetal-dev/flintlock) - this is an agent that's deployed to a host machine (physical or virtual) which enables you to start/manage microvms via API calls. It does not know of Kubernetes and could therefore be used to start a microvm to accomplish any task you choose. We integrate heavily with containerd as a way to use container images as the volumes for the microvm....copying rawfs files around is a real pain and very slow.
-* [Cluster API Provider Microvm (CAPMVM)](https://github.com/liquidmetal-dev/cluster-api-provider-microvm) - this provides the Kubernetes cluster creation/lifecycle management (along with the [Cluster API](https://cluster-api.sigs.k8s.io/) more generally). Its responsible for creating microvms on various hosts via calls to Flintlock and bootstrapping Kubernetes on those microvms. So a microvm becomes a whole Kubernetes node.
-* [Image Builder](https://github.com/liquidmetal-dev/image-builder) - this is where we build the container images that we use for root volumes and kernels for the microvm.
+* [flintlock](https://github.com/liquidmetal-dev/flintlock) - an agent on each host machine that creates and manages microVMs via API calls. It does not know about Kubernetes, so you can use it to start a microVM for any task. It uses containerd so that container images can be the kernel and volumes for a microVM.
+* [Cluster API Provider Microvm (CAPMVM)](https://github.com/liquidmetal-dev/cluster-api-provider-microvm) - a [Cluster API](https://cluster-api.sigs.k8s.io/) infrastructure provider. It creates microVMs on Flintlock hosts and bootstraps Kubernetes on them, so a microVM becomes a whole Kubernetes node.
+* [microvm-operator](https://github.com/liquidmetal-dev/microvm-operator) (experimental) - manage microVMs as Kubernetes resources: `Microvm`, `MicrovmReplicaSet` and `MicrovmDeployment`.
+* [brigade](https://github.com/liquidmetal-dev/brigade) (experimental) - a distributed orchestrator that speaks the Flintlock API and schedules microVMs across a fleet of hosts.
+* [battery](https://github.com/liquidmetal-dev/battery) (experimental) - a warm pool manager that keeps pre-booted microVMs ready to claim instantly.
+* [guest-agent](https://github.com/liquidmetal-dev/guest-agent) (experimental) - an agent inside the microVM that lets the host run commands and copy files over vsock.
+* [muster](https://github.com/liquidmetal-dev/muster) (pre-alpha) - runs each GitHub Actions job in a fresh microVM.
+* [image-builder](https://github.com/liquidmetal-dev/image-builder) - builds the container images that we use for microVM kernels and root volumes.
 
+### :flashlight: What else is there?
 
-
-### :flashlight: What else are we looking at?
-
-* [mikrolite](https://github.com/liquidmetal-dev/mikrolite) - an experimental CLI for creating microvms without flintlock.
-* [fl](https://github.com/liquidmetal-dev/fl) - an experimental CLI for interacting with flintlock to manage the lifecycle of microvms.
+* [hammertime](https://github.com/liquidmetal-dev/hammertime) and [fl](https://github.com/liquidmetal-dev/fl) - CLIs for interacting with Flintlock.
+* [mikrolite](https://github.com/liquidmetal-dev/mikrolite) - an experimental CLI for creating microVMs without Flintlock.
+* [flintlock-terraform](https://github.com/liquidmetal-dev/flintlock-terraform) and [terraform-equinix-liquidmetal](https://github.com/liquidmetal-dev/terraform-equinix-liquidmetal) - Terraform support for Flintlock and for a Liquid Metal platform on Equinix Metal.
 * [EKS-Anywhere (EKS-A)](https://anywhere.eks.amazonaws.com/) (poc) - we have been working on [adding CAPMVM as a provider](https://github.com/liquidmetal-dev/eks-anywhere/tree/capmvm_provider) to EKS-A.
-* Microvm Scheduler (in-development) - this will enable the dynamic placement of microvms on the available pool of hosts machines taking into account resource availability/requirements, labels etc. So, a bit like kube-scheduler but for microvms. We will be providing some integration points so that the scheduler can automatically determine the available baremetal hosts, and we'll add an integration for Tinkerbell (and probably Ironic & MaaS).
 
 ### :pencil2: Want to know more?
 
